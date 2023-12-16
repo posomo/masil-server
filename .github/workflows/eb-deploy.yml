@@ -13,7 +13,7 @@ jobs:
 
       - name: make application.yml
         run: |
-          echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
+          cat "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
           ls ./src
           ls ./src/main
           ls ./src/main/resources
@@ -35,9 +35,10 @@ jobs:
 
       - name: Build with Gradle
         run: |
-          ./gradlew build -x test
-          echo ./src/main/resources/application.yml
+          cat ./src/main/resources/application.yml
           ls -al ./src/main/resources
+          ./gradlew build -x test
+
         shell: bash
 
       - name: Get current time
