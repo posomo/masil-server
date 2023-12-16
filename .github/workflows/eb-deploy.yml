@@ -13,6 +13,7 @@ jobs:
       - name: make application.yml
         run: |
           cd ~
+          ls -al
           cd ./src/main/resources
           echo "${{ secrets.APPLICATION_YML }}" > ./application.yml
         shell: bash
