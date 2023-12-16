@@ -13,9 +13,10 @@ jobs:
 
       - name: make application.yml
         run: |
-          ls -al
-          cd ./src/main/resources
-          echo "${{ secrets.APPLICATION_YML }}" > ./application.yml
+          echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
+          ls ./src
+          ls ./src/main
+          ls ./src/main/resources
         shell: bash
 
       - name: Checkout
