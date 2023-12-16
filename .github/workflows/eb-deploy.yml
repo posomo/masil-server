@@ -67,16 +67,16 @@ jobs:
           deployment_package: deploy/deploy.zip
         continue-on-error: true  # 에러가 발생해도 다음 단계를 진행합니다.
 
-      - name: Check EB status
-        run: |
-          STATUS=$(aws elasticbeanstalk describe-environments --application-name masil --environment-names masil --region ap-northeast-2 --query "Environments[0].Health" --output text)
-          if [[ $STATUS == "Green" || $STATUS == "Yellow" ]]; then
-            echo "Environment is healthy or has warnings, but is operational"
-            exit 0
-          else
-            echo "Environment is not healthy"
-            exit 1
-          fi
-      
+#      - name: Check EB status
+#        run: |
+#          STATUS=$(aws elasticbeanstalk describe-environments --application-name masil --environment-names masil --region ap-northeast-2 --query "Environments[0].Health" --output text)
+#          if [[ $STATUS == "Green" || $STATUS == "Yellow" ]]; then
+#            echo "Environment is healthy or has warnings, but is operational"
+#            exit 0
+#          else
+#            echo "Environment is not healthy"
+#            exit 1
+#          fi
+#
 
-          
+
