@@ -17,6 +17,7 @@ jobs:
           ls ./src
           ls ./src/main
           ls ./src/main/resources
+
         shell: bash
 
       - name: Checkout
@@ -33,7 +34,10 @@ jobs:
         shell: bash
 
       - name: Build with Gradle
-        run: ./gradlew build -x test
+        run: |
+          ./gradlew build -x test
+          echo ./src/main/resources/application.yml
+          ls -al ./src/main/resources
         shell: bash
 
       - name: Get current time
