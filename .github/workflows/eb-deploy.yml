@@ -2,7 +2,8 @@ name: eb-deploy
 
 on:
   push:
-    branches: ['main']
+    branches:
+      - "main"
 #  workflow_dispatch: # 수동 실행
 
 jobs:
@@ -77,6 +78,3 @@ jobs:
 #            echo "Environment is not healthy"
 #            exit 1
 #          fi
-#
-
-
