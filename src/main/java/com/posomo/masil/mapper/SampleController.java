@@ -13,7 +13,7 @@ public class SampleController {
   private final BarMapper barMapper;
   @GetMapping("sample")
   public String sample(){
-    List<Bar> bars = barMapper.getAllBars();
-    return String.valueOf(bars.size());
+    List<SampleDto> dtos = barMapper.getAllBars();
+    return String.valueOf(dtos.size());
   }
 }

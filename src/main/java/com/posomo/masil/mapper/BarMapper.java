@@ -9,6 +9,6 @@ import java.util.List;
 @Mapper
 public interface BarMapper {
 
-  @Select("SELECT * FROM bar")
-  List<Bar> getAllBars();
+  @Select("SELECT category,latitude FROM bar")
+  List<SampleDto> getAllBars();
 }
