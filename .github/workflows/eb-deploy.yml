@@ -12,7 +12,9 @@ jobs:
 
       - name: make application.yml
         run: |
-          echo "${{ secrets.APPLICATION_YML }}" > ./src/main/resources/application.yml
+          cd ~
+          cd ./src/main/resources
+          echo "${{ secrets.APPLICATION_YML }}" > ./application.yml
         shell: bash
 
       - name: Checkout
