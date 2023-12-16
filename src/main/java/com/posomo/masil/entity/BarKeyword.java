@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BarKeyword {
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
-  private Long id;
+  private String id;
   @ManyToOne
   private Keyword keyword;
   private String name;
