@@ -12,6 +12,8 @@ import java.util.List;
 public class Bar {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  @Column(unique = true)
   private String vendorId;
   @OneToMany(mappedBy = "bar")
   private List<BarPhoto> photos;
@@ -19,10 +21,6 @@ public class Bar {
   private List<BarMenu> menus;
   @OneToMany(mappedBy = "bar")
   private List<BarKeyword> keywords;
-  @Embedded
-  private BusinessTime businessTime;
-  @Embedded
-  private Address address;
   private String phoneNumber;
   private Double latitude;
   private Double longitude;
