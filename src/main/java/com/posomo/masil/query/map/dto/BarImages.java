@@ -4,12 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MapBarDto {
-  private String id;
-  private String name;
-  private String commonAddress;
-  private String category;
+@Getter
+public class BarImages {
+  private String barId;
+  private String imageUrl;
 }

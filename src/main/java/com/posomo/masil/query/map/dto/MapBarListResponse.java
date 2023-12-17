@@ -10,8 +10,8 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 public class MapBarListResponse {
-  private int page;
-  private int size;
+  private int limit;
+  private int offset;
   private List<MapBarResponse> bars;
   private boolean hasNext;
 }

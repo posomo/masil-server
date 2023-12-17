@@ -13,6 +13,8 @@ public class MapFilterRequest {
   private List<String> keywords;
   private List<String> drinkCategories;
   private List<String> barCategories;
+  private double latitude;
+  private double longitude;
   private int limit;
   private int offset;
 }
