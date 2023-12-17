@@ -17,7 +17,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class MapController {
   private final MapBarMapper mapper;
-  @PostMapping("/map")
+  @PostMapping("/api/map")
   public MapBarListResponse getMapBars(@RequestBody MapFilterRequest filterRequest){
     List<MapBarDto> bars = mapper.findBarByFilter(filterRequest);
     List<String> ids = bars.stream().map(MapBarDto::getId).toList();
