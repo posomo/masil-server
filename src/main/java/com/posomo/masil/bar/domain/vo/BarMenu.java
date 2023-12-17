@@ -1,4 +1,6 @@
-package com.posomo.masil.entity;
+package com.posomo.masil.bar.domain.vo;
+
+import com.posomo.masil.bar.domain.Bar;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,13 +9,12 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class BarKeyword {
+public class BarMenu {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private String id;
-  @ManyToOne
-  private Keyword keyword;
+  private Long id;
   private String name;
+  private Integer price;
   @ManyToOne
   private Bar bar;
 }

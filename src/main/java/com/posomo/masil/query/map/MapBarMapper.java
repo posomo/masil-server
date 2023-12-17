@@ -1,9 +1,8 @@
 package com.posomo.masil.query.map;
 
-import com.posomo.masil.entity.Bar;
+import com.posomo.masil.bar.domain.Bar;
 import com.posomo.masil.query.map.dto.MapFilterRequest;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectProvider;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.posomo.masil.entity;
+package com.posomo.masil.bar.domain.vo;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

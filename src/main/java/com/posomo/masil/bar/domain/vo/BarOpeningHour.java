@@ -1,10 +1,12 @@
-package com.posomo.masil.entity;
+package com.posomo.masil.bar.domain.vo;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.time.ZonedDateTime;
+
+import com.posomo.masil.bar.domain.Bar;
 
 @Entity
 @AllArgsConstructor
