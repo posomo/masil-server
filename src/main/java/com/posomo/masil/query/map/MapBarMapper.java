@@ -1,6 +1,7 @@
 package com.posomo.masil.query.map;
 
 import com.posomo.masil.entity.Bar;
+import com.posomo.masil.query.map.dto.MapBarDto;
 import com.posomo.masil.query.map.dto.MapFilterRequest;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -11,5 +12,5 @@ import java.util.List;
 @Mapper
 public interface MapBarMapper {
   @SelectProvider(type = FilterQueryBuilder.class, method = "buildFilter")
-  public List<Bar> findBarByFilter(MapFilterRequest filterRequest);
+  public List<MapBarDto> findBarByFilter(MapFilterRequest filterRequest);
 }
