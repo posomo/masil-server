@@ -1,6 +1,5 @@
 package com.posomo.masil.mapper;
 
-import com.posomo.masil.entity.Bar;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
