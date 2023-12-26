@@ -1,14 +1,15 @@
 package com.posomo.masil.query.map;
 
-import com.posomo.masil.bar.domain.Bar;
-import com.posomo.masil.query.map.dto.MapFilterRequest;
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.SelectProvider;
 
-import java.util.List;
+import com.posomo.masil.query.map.dto.MapBarDto;
+import com.posomo.masil.query.map.dto.MapFilterRequest;
 
 @Mapper
 public interface MapBarMapper {
-  @SelectProvider(type = FilterQueryBuilder.class, method = "buildFilter")
-  public List<Bar> findBarByFilter(MapFilterRequest filterRequest);
+	@SelectProvider(type = FilterQueryBuilder.class, method = "buildFilter")
+	List<MapBarDto> findBarByFilter(MapFilterRequest filterRequest);
 }
