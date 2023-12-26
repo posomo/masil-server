@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class ViewTypeObject {
 	private String viewType;
 	private List<String> deeplink;
+	private ViewTypeData data;
 }

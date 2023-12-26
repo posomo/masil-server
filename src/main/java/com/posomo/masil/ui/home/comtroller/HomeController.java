@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.posomo.masil.ui.home.application.HomeUiService;
 import com.posomo.masil.ui.home.comtroller.viewtype.ViewTypeObject;
 
 import lombok.RequiredArgsConstructor;
@@ -14,9 +15,9 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/ui")
 @RequiredArgsConstructor
 public class HomeController {
-
+	private final HomeUiService homeUiService;
 	@GetMapping("/home")
 	public List<ViewTypeObject> getHomeUi() {
-		return null;
+		return homeUiService.composeHomeUi();
 	}
 }
