@@ -1,0 +1,9 @@
+POST localhost:8080/api/propose/bar
+Content-Type: application/json
+
+{
+  "name": "테스트입니다.",
+  "commonAddress": "부산",
+  "description": "테스트용으로 만들었습니다.",
+  "keywords": ["기분이 좋아요", "음식이 친절해요", "사장님이 맛있어요"]
+}
