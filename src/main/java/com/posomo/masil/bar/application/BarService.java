@@ -3,6 +3,7 @@ package com.posomo.masil.bar.application;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.posomo.masil.bar.domain.Bar;
 import com.posomo.masil.bar.domain.BarRepository;
@@ -17,6 +18,7 @@ public class BarService {
 
 	private final BarRepository barRepository;
 
+	@Transactional(readOnly = true)
 	public List<Bar> retrieveBarWithKeyword(String keyword, int limit) {
 		List<Bar> barListByKeyword = barRepository.findBarListByKeyword(keyword, limit);
 		log.info(barListByKeyword.toString());
