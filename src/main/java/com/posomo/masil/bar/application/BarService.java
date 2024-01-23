@@ -2,6 +2,7 @@ package com.posomo.masil.bar.application;
 
 import java.util.List;
 
+import com.posomo.masil.bar.dto.MapBarResponseDto;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,5 +24,10 @@ public class BarService {
 		List<Bar> barListByKeyword = barRepository.findBarListByKeyword(keyword, limit);
 		log.info(barListByKeyword.toString());
 		return barListByKeyword;
+	}
+
+	@Transactional(readOnly = true)
+	public List<Bar> retrieveBarForMap(double longitude, double latitude, double distance, int limit){
+		return barRepository.findBarByLocation(longitude,latitude,distance,limit);
 	}
 }
