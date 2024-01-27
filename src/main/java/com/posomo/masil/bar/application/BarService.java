@@ -39,6 +39,6 @@ public class BarService {
 
 	@Transactional(readOnly = true)
 	public List<BarOpeningHour> openingHours(String vendorId){
-		return
+		return barRepository.findOpeningHoursByVendorId(vendorId);
 	}
 }
