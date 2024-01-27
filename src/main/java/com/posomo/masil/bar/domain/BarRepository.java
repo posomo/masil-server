@@ -1,5 +1,6 @@
 package com.posomo.masil.bar.domain;
 
+import com.posomo.masil.bar.domain.vo.BarOpeningHour;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -17,4 +18,7 @@ public interface BarRepository extends JpaRepository<Bar, String>, BarQuerydsl, 
   @Query(value = "select b from Bar b join fetch b.keywords join fetch b.menus join fetch b.photos " +
           "where b.vendorId=:vendor_id")
   Optional<Bar> findBarByIdJoinFetchAll(@Param(value = "vendor_id")String vendorId);
+
+  @Query(value = "select o from BarOpeningHour o where o.bar.vendorId =: vendor_id")
+  List<BarOpeningHour> findOpeningHoursByVendorId(@Param(value = "vendor_id")String vendorId);
 }
